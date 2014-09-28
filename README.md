@@ -61,7 +61,7 @@ I need to review a few things before disclosing this information :)
 
 ####Licensing:
 
-GPL
+MIT
 
 ---
 
