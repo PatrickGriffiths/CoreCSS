@@ -20,7 +20,7 @@ The shorthand alternative:
 
 ---
 
-#####Just think of the grid visually, anything totally 12 across will be fine. See examples below.
+#####Just think of the grid visually, anything totalling 12 across will be fine. See examples below.
 
 ```HTML
 <div class="row">
