@@ -8,7 +8,7 @@ The columns are called with the "col-" name prefix and the shorthand is "c-" the
 
 ```HTML
 <div class="row">
-  <div class="col-12"> This will spam the full grid. </div
+  <div class="col-12"> This will spam the full grid. </div>
 </div>
 ```
 The shorthand alternative:
