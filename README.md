@@ -6,7 +6,7 @@ CoreCSS is a minimal front-end web framework, built entirely in CSS with love by
 ---
 
 ###Version:
-v0.4.2 - Stable & functioning state.
+v0.3.2 - Working on uploading it all...
 
 ---
 
