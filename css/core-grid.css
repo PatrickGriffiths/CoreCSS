@@ -1,3 +1,17 @@
+/* ----------------------------------------------
+ * core-grid.css is a part of the CoreCSS web framework, seperated to allow users to opt for it or use a grid system that they are
+ * already familiar with, that way the front end styling can work alongside a pre-existing grid framework a user has worked with and you're
+ * not stuck with trying to use the one that I have developed for CoreCSS if you don't wish to.
+ * ----------------------------------------------
+ * CoreCSS is a CSS only front end web framework, designed and developped by Patrick Griffiths for rapidly creating website mockups 
+ * and developing full sites without any complicated preprocessing of any kind... Well commented and easy to use.
+ * ----------------------------------------------
+ * Homepage: https://www.MedievalArtStudio.com/coreCSS   [!!Note yet live!! -- Check back on October 31st 2014]
+ * GitHub: https://www.github.com/PatrickGriffiths/CoreCSS
+ * ----------------------------------------------
+ * E-Mail: patriick.griffiths@yahoo.com
+ * ----------------------------------------------
+*/
 *, *:after, *:before {
     margin: 0;
     padding: 0;
@@ -55,6 +69,7 @@
 /*================================*/
 /*      PUSH - PULL - OFFSETS     */
 /*================================*/
+/* I will probably remove the "offset" classes and promote people to pickup the push and pull varients... */
 /* LEFT */
 .offset-left-half,  .pull-half  {margin-right: 4.15%;}
 .offset-left-1,     .pull-1     {margin-right: 8.3%;}
@@ -238,8 +253,6 @@
     .row .c-3:nth-child(4),   .row-max .c-3:nth-child(4){
         float: right;
     }
-    
-    
     .hide-tablet, .hide-tablet-landscape {
         display: none;
     }

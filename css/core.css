@@ -1,0 +1,616 @@
+/* ----------------------------------------------
+ * core-grid.css is a part of the CoreCSS web framework, seperated to allow users to opt for it or use a grid system that they are
+ * already familiar with, that way the front end styling can work alongside a pre-existing grid framework a user has worked with and you're
+ * not stuck with trying to use the one that I have developed for CoreCSS if you don't wish to.
+ * ----------------------------------------------
+ * CoreCSS is a CSS only front end web framework, designed and developped by Patrick Griffiths for rapidly creating website mockups 
+ * and developing full sites without any complicated preprocessing of any kind... Well commented and easy to use.
+ * ----------------------------------------------
+ * Homepage: https://www.MedievalArtStudio.com/coreCSS   [!!Note yet live!! -- Check back on October 31st 2014]
+ * GitHub: https://www.github.com/PatrickGriffiths/CoreCSS
+ * ----------------------------------------------
+ * E-Mail: patriick.griffiths@yahoo.com
+ * ----------------------------------------------
+*/
+/*
+==========================
+!!--       RESET      --!!
+==========================
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+li, ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*!!--        /END RESET      --!!*/
+
+/*
+This adds that snazzy little animation to all elements within the site that happen to change, whether its scale or otherwise it will have a nice animation effect. Feel free to alter the time taken to transition, or remove it entirely :)
+*/
+* {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/*
+==========================================
+!!--      GENERAL MOCKUP STYLING      --!!
+==========================================
+*/
+body {
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    line-height: 1.66em;
+    background-color: #ddd;
+    color: #131D24;
+}
+/*-- This is used mostly for the responsive menu system that I am working up, you would embody all of your website's main content withinn this after the navigation menu, and this will also have the fix for using sticky navbars and have it not eclipse the content.*/
+.site-wrap {
+    padding-top: 65px;
+}
+
+/*-- NOTIFICATIONS --*/
+.panel-alert, .box-alert  {
+    color: #9D313C;
+    background-color: #F8BBC1;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 1px 2px 0 rgba(237, 85, 101, 1);
+    -moz-box-shadow: 0 1px 2px 0 rgba(237, 85, 101, 1);
+    -webkit-box-shadow: 0 1.5px 2px 0 rgba(237, 85, 101, 0.5);
+}
+.panel-success, .box-success  {
+    color: #5A7B35;
+    background-color: #C6E5A4;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 1px 2px 0 rgba(160, 212, 104, 0.8);
+    -moz-box-shadow: 0 1px 2px 0 rgba(160, 212, 104, 0.8);
+    -webkit-box-shadow: 0 1.5px 2px 0 rgba(160, 212, 104, 0.8);
+}
+.panel-warning, .box-warning  {
+    color: #CA5841;
+    background-color: #FEC5B9;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 1px 2px 0 rgba(252, 110, 81, 0.6);
+    -moz-box-shadow: 0 1px 2px 0 rgba(252, 110, 81, 0.6);
+    -webkit-box-shadow: 0 1.5px 2px 0 rgba(252, 110, 81, 0.6);
+}
+
+/*-- FOOTER --*/
+footer, .footer{
+    ;
+}
+
+
+/*
+==============================
+!!--      NAVIGATION      --!!
+==============================
+*/
+
+/*-- Links --*/
+a        {;}
+a:hover,
+a:focus  {;}
+a:active {;}
+
+/*-- Actual Nav Bar --*/
+nav, .navbar {
+    background-color: #131d24;
+    width: 100%;
+    height: 65px;
+    line-height: 1.5em;
+}
+nav:after, nav ul:after, .navbar:after, .navbar ul:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+nav ul, .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav li, .navbar li {
+    float: left;
+    color: #C7C7C7;
+    padding-left: 1em;
+    padding-right: 1em;
+    line-height: 65px;
+    display: block;
+}
+nav li:hover, nav li:focus, .navbar li:hover, .navbar li:focus {
+    height: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #fff;
+    background: #2B343A; /*#5B585F*/
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+}
+nav ul li a, .navbar ul li a {
+    ;
+}
+nav ul li a:hover, nav ul li a:focus, .navbar ul li a:hover, .navbar ul li a:focus {
+    color: #fff;
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+}
+nav ul > li > a, .navbar ul > li > a{
+    color: #DCD7E1;
+    cursor: pointer;
+    text-decoration: none;
+}
+nav ul > li > a:hover, .navbar ul > li > a:hover{
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+.navbar ul > li > a.active{
+    background-color: #2C3E50;
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    line-height: 64px;
+    color: #fff;
+    font-size: 0.8em;
+    transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    -webkit-transition: all .15s ease-in-out;
+}
+
+/*-- STUFF TO ADD SOON ^__^
+.sidebar
+
+.app-bar-vertical
+.app-bar-horizontal
+
+.app-bar-top, .sidebar-top
+
+.app-bar-bottom, .sidebar-bottom
+
+.app-panel
+
+
+.breadcrumbs
+.breadcrumbs-alt
+
+.pagination
+.pagination-alt
+*/
+
+
+/*!!--  /END NAVIGATION  --!!*/
+
+/*
+==============================
+!!--      TYPOGRAPHY      --!!
+==============================
+*/
+/*
+------ Headers
+*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    color: ;
+}
+/* Font Sizes May Require Some Tweaking Soon */
+.h1, h1 {font-size: 2em;        margin-bottom: 0.5em;   text-transform: capitalize;}
+.h2, h2 {font-size: 1.5em;      margin-bottom: 0.6em;   text-transform: capitalize;}
+.h3, h3 {font-size: 1.3em;      margin-bottom: 0.3em;   text-transform: capitalize;}
+.h4, h4 {font-size: 1.125em;    margin-bottom: 0.3em;   text-transform: capitalize;}
+.h5, h5 {font-size: 1em;        margin-bottom: 0.3em;   text-transform: capitalize;}
+.h6, h6 {font-size: 0.8125em;   margin-bottom: 0.3em;   text-transform: uppercase;}
+
+.h1, h1,
+.h2, h2 {line-height: 1.1em;}
+.h3, h3,
+.h4, h4 {line-height: 1.3em;}
+
+
+/*
+---- Text
+*/
+p {line-height: 1.66em; margin-bottom: 1.65em;}
+
+/*-- Bold Text --*/
+b,
+bold,
+.bold,
+.strong {
+    font-weight: bold;
+}
+/*-- Italic Text --*/
+i,
+em,
+italic,
+.italic {
+    font-style: italic; color: #5A6166;
+}
+/*-- Strikethrough Text --*/
+s,
+del,
+.strike,
+.strikethrough {
+    text-decoration: line-through;
+}
+/*-- Underline Text --*/
+u,
+ins,
+.underline {
+    text-decoration: line-through;
+}
+
+/*-- Other Typography Elements --*/
+sub,
+sup {
+    position: relative;
+    font-size: 12px;
+    line-height: 0;
+    bottom: 0.25em;
+}
+
+
+
+/*-- Text Sizing Classes --*/
+.tiny-text    {font-size: ; line-height: ;}
+.small-text   {font-size: ; line-height: ;}
+.medium-text  {font-size: ; line-height: ;}
+.large-txet   {font-size: ; line-height: ;}
+.super-text   {font-size: ; line-height: ;}
+/*-- Text Aligning Classes --*/
+.text-top     {vertical-align: text-top;}
+.text-bottom  {vertical-align: text-bottom;}
+
+/*
+------ Lists
+*/
+
+
+
+/*
+------ Quotes
+*/
+
+blockquote, .quote {;}
+
+
+
+
+/*!!--  /END TYPOGRAPHY  --!!*/
+
+/*
+===========================
+!!--      BUTTONS      --!!
+===========================
+*/
+button,
+.button,
+.btn {
+    color: #ddd;
+    background: #131d24;
+    cursor: pointer;
+    border: 0 none;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1.65em;
+    margin-top: 10px;
+    padding: 10px 10px;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    text-align: center; /* DELETE WHEN WIDTH AUTO */
+}
+button:hover, button:focus,
+.button:hover, .button:focus,
+.btn:hover, .btn:focus {
+    color: #fff;
+    background-color: #2c3e50;
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+}
+
+/*-- BUTTON SIZE CLASSES --*/
+.small-button,
+.small-btn,
+.s-btn {
+    font-size: 0.8125em;
+    line-height: 1.2em;
+    font-weight: lighter;
+}
+/* -- Replace with the default button classes (:))
+.medium-button,
+.med-btn,
+.medium-btn,
+.m-btn {
+    font-size: 1.10em;
+    line-height: 1.35em;
+}
+*/
+.large-button,
+.large-btn,
+.l-button {
+    font-size: 1.025em;
+    line-height: 1.65em;
+    padding: 13px 13px;
+    font-weight: bold;
+}
+.super-button,
+.super-btn,
+.xl-button {
+    font-size: 1.125em;
+    line-height: 1.65em;
+    padding: 15px 15px;
+    font-weight: bolder;
+}
+
+
+
+/*!!--  /END BUTTONS  --!!*/
+
+/*
+==========================
+!!--      TABLES      --!!
+==========================
+*/
+
+
+/*!!--  /END TABLES  --!!*/
+
+/*
+=========================
+!!--      FORMS      --!!
+=========================
+*/
+
+
+/*!!--  /END FORMS  --!!*/
+
+/*
+==========================
+!!--      LABELS      --!!
+==========================
+*/
+
+
+/*!!--  /END LABELS  --!!*/
+
+/*
+==========================
+!!--      IMAGES      --!!
+==========================
+*/
+
+
+/*!!--  /END IMAGES  --!!*/
+
+
+
+/*
+===================================================
+!!--      SECTIONS, DIVIDERS & SEPERATORS      --!!
+==================================================-
+*/
+/*  Used to mockup content areas of a web page, will likely remove soon  */
+section, .section   { height: 450px; }
+.height-550, .h-550 { height: 550px; }
+.height-650, .h-600 { height: 600px; }
+
+
+/*  Used to include a graphical style to the end of a section within a page or within a web element  */
+.seperator- {;}
+.seperator- {;}
+.seperator- {;}
+.seperator- {;}
+.seperator- {;}
+.seperator- {;}
+.seperator- {;}
+.seperator- {;}
+
+
+/*  Various Divider styles  */
+hr, .divider {;}
+
+
+/*!!--  /END SECTIONS, DIVIDERS &SEPERATORS  --!!*/
+
+/*
+==================================
+!!--      HELPER CLASSES      --!!
+==================================
+*/
+/*-- Sticky Attribute for Nav elements --*/
+.sticky {position: fixed;}
+
+/*-- WIDTH HELPER CLASSES --*/
+.full-width, .max, .full {
+    width: 100%;
+}
+.half-width, .half {
+    width: 50%;
+}
+.half-centered, .half-center {
+    width: 50%; margin-left: 25%; margin-right: 25%;
+}
+/*-- ALIGNMENT --*/
+.float-left,  .left  {float: left; !important}
+.float-right, .right {float: right; !important}
+.allign-top          {vertical-align: top;}
+.allign-middle       {vertical-align: middle;}
+.allign-bottom       {vertical-align: bottom;}
+.text-top            {vertical-align: text-top;}
+.text-bottom         {vertical-align: text-bottom;}
+
+/*-- DISPLAY --*/
+.display-block        {display: block;}
+.display-inline       {display: inline;}
+.display-inline-block {display: inline-block;}
+
+/*-- Clearfix --*/
+.group-container, .group-container:after, .clearfix, .clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/*-- GRAPHICAL MOCKUP HELPER CLASSES --*/
+.box, .panel  {background-color: #ffffff;
+               box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+          -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+       -webkit-box-shadow: 0 1.5px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.round-3px,  .r-3px  {border-radius: 3px;}
+.round-5px,  .r-5px  {border-radius: 5px;}
+.round-10px, .r-10px {border-radius: 10px;}
+.round-15px, .r-15px {border-radius: 15px;}
+.round-25px, .r-25px {border-radius: 25px;}
+.round-full, .circle {border-radius: 150px;
+	          -webkit-border-radius: 150px;
+	             -moz-border-radius: 150px;
+}
+
+
+/*!!--  /END HELPER CLASSES  --!!*/
+
+
+/*
+==============================
+!!--      ANIMATIONS      --!!
+==============================
+*/
+
+
+/*!!--  /END ANIMATIONS  --!!*/
+
+
+
+
+
+/*
+================================================================================================
+!!--      COLOUR CLASSES (MOCKEUP ONLY) - Will be tweaked and possibly removed later...     --!!
+================================================================================================
+*/
+/*-- Font Light Colours --*/
+.black             {color: #222; !important;}
+.white             {color: #fff; !important;}
+.red               {color: #ED5565;!important;}
+.orange            {color: #FC6E51;!important;}
+.yellow            {color: #FFCE54;!important;}
+.green             {color: #A0D468;!important;}
+.cyan              {color: #48CFAD;!important;}
+.aqua              {color: #4FC1E9;!important;}
+.blue              {color: #5D9CEC;!important;}
+.purple            {color: #AC92EC;!important;}
+.pink              {color: #EC87C0;!important;}
+.grey              {color: #F5F7FA;!important;} /*Almost White*/
+.mediumgrey        {color: #CCD1D9;!important;}
+.darkgrey          {color: #656D78;!important;}
+.wetblue           {color: #34495E;!important;}
+/*-- Font Dark Colours --*/
+.dark-red          {color: #DA4453;!important;}
+.dark-orange       {color: #E9573F;!important;}
+.dark-yellow       {color: #F6BB42;!important;}
+.dark-green        {color: #A0D468;!important;}
+.dark-cyan         {color: #48CFAD;!important;}
+.dark-aqua         {color: #3BAFDA;!important;}
+.dark-bluw         {color: #4A89DC;!important;}
+.dark-purple       {color: #967ADC;!important;}
+.dark-pink         {color: #D770AD;!important;}
+.dark-grey         {color: #E6E9ED;!important;}
+.dark-mediumgrey   {color: #AAB2BD;!important;}
+.dark-darkgrey     {color: #434A54;!important;}
+.dark-wetblue      {color: #2C3E50;!important;}
+/*-- Background Light Colours --*/
+.bg-black          {background-color: #222; !important;}
+.bg-white          {background-color: #fff; !important;}
+.bg-red            {background-color: #ED5565;!important;}
+.bg-orange         {background-color: #FC6E51;!important;}
+.bg-yellow         {background-color: #FFCE54;!important;}
+.bg-green          {background-color: #A0D468;!important;}
+.bg-cyan           {background-color: #48CFAD;!important;}
+.bg-aqua           {background-color: #4FC1E9;!important;}
+.bg-blue           {background-color: #5D9CEC;!important;}
+.bg-purple         {background-color: #AC92EC;!important;}
+.bg-pink           {background-color: #EC87C0;!important;}
+.bg-grey           {background-color: #F5F7FA;!important;} /*Almost White*/
+.bg-mediumgrey     {background-color: #CCD1D9;!important;}
+.bg-darkgrey       {background-color: #656D78;!important;}
+.bg-wetblue        {background-color: #34495E;!important;}
+/*-- Background Dark Colours --*/
+.bg-dark-red       {background-color: #DA4453;!important;}
+.bg-dark-pink      {background-color: #D770AD;!important;}
+.bg-dark-orange    {background-color: #E9573F;!important;}
+.bg-dark-yellow    {background-color: #F6BB42;!important;}
+.bg-dark-green     {background-color: #8CC152;!important;}
+.bg-dark-cyan      {background-color: #48CFAD;!important;}
+.bg-dark-aqua      {background-color: #3BAFDA;!important;}
+.bg-dark-bluw      {background-color: #4A89DC;!important;}
+.bg-dark-purple    {background-color: #967ADC;!important;}
+.bg-dark-pink      {background-color: #D770AD;!important;}
+.bg-dark-grey      {background-color: #E6E9ED;!important;}
+.bg-dark-mediumgrey{background-color: #AAB2BD;!important;}
+.bg-dark-darkgrey  {background-color: #434A54;!important;}
+.bg-dark-wetblue   {background-color: #2C3E50;!important;}
+
+/*!!--  /END COLOUR CLASSES  --!!*/
+
+
+
+
+/*
+=================================
+!!--      Dummy Comment      --!!
+=================================
+*/
+
+
+/*!!--  /END Dummy  --!!*/
+
+
