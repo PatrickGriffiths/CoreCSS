@@ -137,6 +137,7 @@ a:active {;}
 
 /*-- Actual Nav Bar --*/
 nav, .navbar {
+    z-index: 1;
     background-color: #131d24;
     width: 100%;
     height: 65px;
@@ -412,13 +413,59 @@ button:hover, button:focus,
 /*!!--  /END FORMS  --!!*/
 
 /*
-==========================
-!!--      LABELS      --!!
-==========================
+================================
+!!--      LABELS & TAGS     --!!
+================================
 */
 
+.tags {
+    content: " ";
+    display: table;
+    clear: both;
+}
+.tags li {
+    cursor: pointer;
+    float: left;
+    position: relative;
+    background-color: #e6e9ed;
+    padding: 10px 18px;
+    margin: 8px;
+    font-weight: bold;
+    font-size: .9125em;
+    border-style: solid;
+    border-color: #aab2bd;
+    border-right-width: 5px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1.5px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.tags li:hover {
+    background-color: #f5f7fa;
+}
+/*   WITH TRIANGLE ARROW POINTED TOWARDS TEXT -- EXPERIMENTAL --
+.tags li:after {
+    right: 0;
+    position: absolute;
+    content: " ";
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent; 	
+	border-right: 4px solid #5a6166;
+    bottom: 40%;
+    top: 40%;
+}
+*/
+.tags li.tag-red    { border-color: #da4453; }
+.tags li.tag-blue   { border-color: #5d9cec; }
+.tags li.tag-green  { border-color: #5a7b35; }
+.tags li.tag-yellow { border-color: #f6bb42; }
+.tags li.tag-orange { border-color: #fc6e51; }
+.tags li.tag-pink   { border-color: #d770ad; }
+.tags li.tag-grey   { border-color: #656d78; }
 
-/*!!--  /END LABELS  --!!*/
+
+
+
+/*!!--  /END LABELS & tags  --!!*/
 
 /*
 ==========================
