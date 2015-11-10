@@ -1,3 +1,7 @@
+Update
+=======
+I never did get to uploading my code from the old framework I was using, I've been using it for a long time now and making small additions and edits here and there, I'll be working towards cleaning some of it and throwing it up on here as soon as I can... This entire README will be edited when I get to that.
+
 CoreCSS
 =======
 
